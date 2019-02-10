@@ -3,13 +3,13 @@
 #
 ro.secure=1
 security.perf_harden=1
-ro.adb.secure=1
 ro.allow.mock.location=0
-ro.debuggable=0
+ro.adb.secure=0
+ro.debuggable=1
 #
 # BOOTIMAGE_BUILD_PROPERTIES
 #
-ro.bootimage.build.date=Thu Feb 7 16:35:25 UTC 2019
-ro.bootimage.build.date.utc=1549557325
-ro.bootimage.build.fingerprint=Sony/aosp_h4213/discovery:8.1.0/OPM7.181205.001/sledge02071635:user/dev-keys
-persist.sys.usb.config=none
+ro.bootimage.build.date=Sun Feb 10 15:27:20 CET 2019
+ro.bootimage.build.date.utc=1549808840
+ro.bootimage.build.fingerprint=Sony/aosp_f8331/kagura:8.1.0/OPM8.190205.001/builde02101527:userdebug/test-keys
+persist.sys.usb.config=adb
