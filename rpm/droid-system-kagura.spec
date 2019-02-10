@@ -1,5 +1,5 @@
-%define device discovery
-%define rpm_device discovery
+%define device kagura
+%define rpm_device kagura
 
 %define dsd_path ./
 

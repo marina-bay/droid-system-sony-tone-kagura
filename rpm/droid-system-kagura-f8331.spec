@@ -5,8 +5,8 @@
 %define __requires_exclude ^.*$
 %global debug_package %{nil}
 
-%define family discovery
-%define device h3213
+%define family kagura
+%define device f8331
 
 Name:          droid-system-%{family}-%{device}
 Summary:       Built from source /system for Droid HAL adaptations
@@ -17,7 +17,7 @@ License:       Proprietary
 Requires:      droid-system-%{family}
 Source0:       %{name}-%{version}.tgz
 Source1:       droid-system-%{family}-rpmlintrc
-URL:           https://bitbucket.org/jolla/sony-nile-droid-system-discovery
+URL:           https://github.com/marina-bay/droid-system-sony-tone-kagura
 
 %description
 %{summary}
