@@ -143,8 +143,23 @@ Requires(post): libcap
 [ -e /system/bin/vr ] && chown 0:2000 /system/bin/vr
 [ -e /system/bin/wificond ] && chown 0:2000 /system/bin/wificond
 [ -e /system/bin/wm ] && chown 0:2000 /system/bin/wm
-[ -e /system/./bin/logd ] && setcap cap_setgid,cap_audit_control,cap_syslog+ep /system/./bin/logd
-[ -e /system/./bin/run-as ] && setcap cap_setgid,cap_setuid+ep /system/./bin/run-as
-[ -e /system/./bin/surfaceflinger ] && setcap cap_sys_nice+ep /system/./bin/surfaceflinger
-[ -e /system/./bin/webview_zygote32 ] && setcap cap_setgid,cap_setuid,cap_setpcap+ep /system/./bin/webview_zygote32
-[ -e /system/./bin/webview_zygote64 ] && setcap cap_setgid,cap_setuid,cap_setpcap+ep /system/./bin/webview_zygote64
+
+# TODO: These fail with:
+#
+# (1/1) Installing: droid-system-kagura-1-1.armv7hl [.............done]
+# Additional rpm output:
+# unable to set CAP_SETFCAP effective capability: Operation not permitted
+# unable to set CAP_SETFCAP effective capability: Operation not permitted
+# unable to set CAP_SETFCAP effective capability: Operation not permitted
+# unable to set CAP_SETFCAP effective capability: Operation not permitted
+# unable to set CAP_SETFCAP effective capability: Operation not permitted
+# warning: %post(droid-system-kagura-1-1.armv7hl) scriptlet failed, exit status 1
+#
+# * Check /home/me/dev/android/omni/hybris/droid-system-kagura.log for full log.
+# !! can't install the package
+
+#[ -e /system/./bin/logd ] && setcap cap_setgid,cap_audit_control,cap_syslog+ep /system/./bin/logd
+#[ -e /system/./bin/run-as ] && setcap cap_setgid,cap_setuid+ep /system/./bin/run-as
+#[ -e /system/./bin/surfaceflinger ] && setcap cap_sys_nice+ep /system/./bin/surfaceflinger
+#[ -e /system/./bin/webview_zygote32 ] && setcap cap_setgid,cap_setuid,cap_setpcap+ep /system/./bin/webview_zygote32
+#[ -e /system/./bin/webview_zygote64 ] && setcap cap_setgid,cap_setuid,cap_setpcap+ep /system/./bin/webview_zygote64
