@@ -144,7 +144,8 @@ Requires(post): libcap
 [ -e /system/bin/wificond ] && chown 0:2000 /system/bin/wificond
 [ -e /system/bin/wm ] && chown 0:2000 /system/bin/wm
 
-# TODO: These fail with:
+# TODO: These fail
+# -> Need to find out a way to apply caps from the init files!
 #
 # (1/1) Installing: droid-system-kagura-1-1.armv7hl [.............done]
 # Additional rpm output:
